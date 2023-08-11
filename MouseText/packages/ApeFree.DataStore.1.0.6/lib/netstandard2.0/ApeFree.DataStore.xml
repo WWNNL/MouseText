@@ -1,0 +1,416 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ApeFree.DataStore</name>
+    </assembly>
+    <members>
+        <member name="P:ApeFree.DataStore.Adapters.AesEncryptionAdapter.CipherMode">
+            <summary>
+            指定要用于加密的块密码模式
+            </summary>
+        </member>
+        <member name="P:ApeFree.DataStore.Adapters.AesEncryptionAdapter.PaddingMode">
+            <summary>
+            指定在消息数据块短于加密操作所需的完整字节数时要应用的填充类型
+            </summary>
+        </member>
+        <member name="P:ApeFree.DataStore.Adapters.AesEncryptionAdapter.BlockSize">
+            <summary>
+            获取或设置加密操作的块大小（以位为单位）
+            </summary>
+        </member>
+        <member name="P:ApeFree.DataStore.Adapters.AesEncryptionAdapter.KeySize">
+            <summary>
+            获取或设置用于对称算法的密钥大小（以位为单位）
+            </summary>
+        </member>
+        <member name="P:ApeFree.DataStore.Adapters.AesEncryptionAdapter.RgbKey">
+            <summary>
+            用于对称算法的密钥（长度为[KeySize/8]字节）
+            </summary>
+        </member>
+        <member name="P:ApeFree.DataStore.Adapters.AesEncryptionAdapter.RgbIV">
+            <summary>
+            用于对称算法的初始化向量（长度为16字节）
+            </summary>
+        </member>
+        <member name="M:ApeFree.DataStore.Adapters.AesEncryptionAdapter.Encode(System.IO.Stream)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApeFree.DataStore.Adapters.AesEncryptionAdapter.Decode(System.IO.Stream)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApeFree.DataStore.Adapters.AesEncryptionAdapter.Dispose">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApeFree.DataStore.Adapters.BaseCompressionAdapter.Compress(System.IO.Stream)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApeFree.DataStore.Adapters.BaseCompressionAdapter.Decompress(System.IO.Stream)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApeFree.DataStore.Adapters.BaseCompressionAdapter.Dispose">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApeFree.DataStore.Adapters.BaseEncryptionAdapter.Decode(System.IO.Stream)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApeFree.DataStore.Adapters.BaseEncryptionAdapter.Dispose">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApeFree.DataStore.Adapters.BaseEncryptionAdapter.Encode(System.IO.Stream)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApeFree.DataStore.Adapters.BaseSerializationAdapter.Deserialize``1(System.IO.Stream)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApeFree.DataStore.Adapters.BaseSerializationAdapter.Serialize(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApeFree.DataStore.Adapters.BaseSerializationAdapter.Dispose">
+            <inheritdoc/>
+        </member>
+        <member name="T:ApeFree.DataStore.Adapters.DeflateCompressionAdapter">
+            <summary>
+            Deflate算法压缩适配器
+            </summary>
+        </member>
+        <member name="M:ApeFree.DataStore.Adapters.DeflateCompressionAdapter.Compress(System.IO.Stream)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApeFree.DataStore.Adapters.DeflateCompressionAdapter.Decompress(System.IO.Stream)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApeFree.DataStore.Adapters.DeflateCompressionAdapter.Dispose">
+            <inheritdoc/>
+        </member>
+        <member name="T:ApeFree.DataStore.Adapters.GZipCompressionAdapter">
+            <summary>
+            GZip算法压缩适配器
+            </summary>
+        </member>
+        <member name="M:ApeFree.DataStore.Adapters.GZipCompressionAdapter.Compress(System.IO.Stream)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApeFree.DataStore.Adapters.GZipCompressionAdapter.Decompress(System.IO.Stream)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApeFree.DataStore.Adapters.GZipCompressionAdapter.Dispose">
+            <inheritdoc/>
+        </member>
+        <member name="T:ApeFree.DataStore.Adapters.JsonSerializationAdapter">
+            <summary>
+            Json序列化器
+            </summary>
+        </member>
+        <member name="F:ApeFree.DataStore.Adapters.JsonSerializationAdapter.serializerSettings">
+            <summary>
+            默认的Json序列化配置
+            私有静态，此对象用作全局的默认配置，不允许被外部获取，以免被修改
+            </summary>
+        </member>
+        <member name="P:ApeFree.DataStore.Adapters.JsonSerializationAdapter.SerializerSettings">
+            <summary>
+            Json序列化配置
+            </summary>
+        </member>
+        <member name="P:ApeFree.DataStore.Adapters.JsonSerializationAdapter.Encoding">
+            <summary>
+            字符编码
+            </summary>
+        </member>
+        <member name="M:ApeFree.DataStore.Adapters.JsonSerializationAdapter.#ctor(Newtonsoft.Json.JsonSerializerSettings)">
+            <summary>
+            构造Json格式的序列化适配器
+            </summary>
+            <param name="serializerSettings"></param>
+        </member>
+        <member name="M:ApeFree.DataStore.Adapters.JsonSerializationAdapter.Deserialize``1(System.IO.Stream)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApeFree.DataStore.Adapters.JsonSerializationAdapter.Serialize(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApeFree.DataStore.Adapters.JsonSerializationAdapter.Dispose">
+            <inheritdoc/>
+        </member>
+        <member name="T:ApeFree.DataStore.Adapters.XmlSerializationAdapter">
+            <summary>
+            Xml序列化器
+            </summary>
+        </member>
+        <member name="P:ApeFree.DataStore.Adapters.XmlSerializationAdapter.RootName">
+            <summary>
+            根节点名称
+            </summary>
+        </member>
+        <member name="M:ApeFree.DataStore.Adapters.XmlSerializationAdapter.Deserialize``1(System.IO.Stream)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApeFree.DataStore.Adapters.XmlSerializationAdapter.Serialize(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApeFree.DataStore.Adapters.XmlSerializationAdapter.Dispose">
+            <inheritdoc/>
+        </member>
+        <member name="P:ApeFree.DataStore.Core.AccessSettings.SerializationAdapter">
+            <inheritdoc/>
+        </member>
+        <member name="P:ApeFree.DataStore.Core.AccessSettings.CompressionAdapter">
+            <inheritdoc/>
+        </member>
+        <member name="P:ApeFree.DataStore.Core.AccessSettings.EncryptionAdapter">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApeFree.DataStore.Core.AccessSettings.Dispose">
+            <inheritdoc/>
+        </member>
+        <member name="P:ApeFree.DataStore.Core.IAccessSettings.SerializationAdapter">
+            <summary>
+            序列化适配器
+            </summary>
+        </member>
+        <member name="P:ApeFree.DataStore.Core.IAccessSettings.CompressionAdapter">
+            <summary>
+            压缩适配器
+            </summary>
+        </member>
+        <member name="P:ApeFree.DataStore.Core.IAccessSettings.EncryptionAdapter">
+            <summary>
+            加密适配器
+            </summary>
+        </member>
+        <member name="T:ApeFree.DataStore.Core.ICompressionAdapter">
+            <summary>
+            压缩适配器
+            </summary>
+        </member>
+        <member name="M:ApeFree.DataStore.Core.ICompressionAdapter.Compress(System.IO.Stream)">
+            <summary>
+            压缩
+            </summary>
+            <param name="stream"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApeFree.DataStore.Core.ICompressionAdapter.Decompress(System.IO.Stream)">
+            <summary>
+            解压缩
+            </summary>
+            <param name="stream"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ApeFree.DataStore.Core.IEncryptionAdapter">
+            <summary>
+            加密适配器
+            </summary>
+        </member>
+        <member name="M:ApeFree.DataStore.Core.IEncryptionAdapter.Encode(System.IO.Stream)">
+            <summary>
+            加密
+            </summary>
+            <param name="stream"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApeFree.DataStore.Core.IEncryptionAdapter.Decode(System.IO.Stream)">
+            <summary>
+            解密
+            </summary>
+            <param name="stream"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ApeFree.DataStore.Core.ISerializationAdapter">
+            <summary>
+            序列化适配器
+            </summary>
+        </member>
+        <member name="M:ApeFree.DataStore.Core.ISerializationAdapter.Serialize(System.Object)">
+            <summary>
+            序列化
+            </summary>
+            <param name="obj">需要被序列化的对象</param>
+            <returns>序列化后的数据流</returns>
+        </member>
+        <member name="M:ApeFree.DataStore.Core.ISerializationAdapter.Deserialize``1(System.IO.Stream)">
+            <summary>
+            反序列化
+            </summary>
+            <typeparam name="T">目标类型</typeparam>
+            <param name="stream">被序列化对象的数据流</param>
+            <returns></returns>
+        </member>
+        <member name="M:ApeFree.DataStore.Core.IStore.Load">
+            <summary>
+            加载数据
+            </summary>
+        </member>
+        <member name="M:ApeFree.DataStore.Core.IStore.LoadAsync">
+            <summary>
+            异步加载数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApeFree.DataStore.Core.IStore.Save">
+            <summary>
+            保存数据
+            </summary>
+        </member>
+        <member name="M:ApeFree.DataStore.Core.IStore.SaveAsync">
+            <summary>
+            异步保存数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:ApeFree.DataStore.Core.IStore`1.Value">
+            <summary>
+            存储对象
+            </summary>
+        </member>
+        <member name="T:ApeFree.DataStore.Core.ReusableThreadPoolManager">
+            <summary>
+            复用线程池管理器
+            </summary>
+        </member>
+        <member name="F:ApeFree.DataStore.Core.ReusableThreadPoolManager.single">
+            <summary>
+            加了Lazy之后，只有当使用到的时候才加载
+            </summary>
+        </member>
+        <member name="P:ApeFree.DataStore.Core.Store`2.ValueFactory">
+            <summary>
+            在需要时为生成延迟初始化值而调用的委托
+            </summary>
+        </member>
+        <member name="P:ApeFree.DataStore.Core.Store`2.AccessSettings">
+            <summary>
+            <inheritdoc/>
+            </summary>
+        </member>
+        <member name="P:ApeFree.DataStore.Core.Store`2.Value">
+            <summary>
+            <inheritdoc/>
+            </summary>
+        </member>
+        <member name="M:ApeFree.DataStore.Core.Store`2.OnLoad">
+            <summary>
+            <inheritdoc/>
+            </summary>
+        </member>
+        <member name="M:ApeFree.DataStore.Core.Store`2.OnSave">
+            <summary>
+            <inheritdoc/>
+            </summary>
+        </member>
+        <member name="M:ApeFree.DataStore.Core.Store`2.Load">
+            <summary>
+            <inheritdoc/>
+            </summary>
+        </member>
+        <member name="M:ApeFree.DataStore.Core.Store`2.Save">
+            <summary>
+            <inheritdoc/>
+            </summary>
+        </member>
+        <member name="M:ApeFree.DataStore.Core.Store`2.Dispose">
+            <inheritdoc/>
+        </member>
+        <member name="M:ApeFree.DataStore.Core.Store`2.GetStoreThreadPool">
+            <summary>
+            获取Store专用的复用线程池
+            </summary>
+            <param name="_"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApeFree.DataStore.Core.Store`2.LoadAsync">
+            <summary>
+            <inheritdoc/>
+            </summary>
+        </member>
+        <member name="M:ApeFree.DataStore.Core.Store`2.SaveAsync">
+            <summary>
+            <inheritdoc/>
+            </summary>
+        </member>
+        <member name="M:ApeFree.DataStore.Core.StoreExtension.LoadAsync(ApeFree.DataStore.Core.IStore)">
+            <summary>
+            异步加载数据
+            </summary>
+            <param name="store"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApeFree.DataStore.Core.StoreExtension.SaveAsync(ApeFree.DataStore.Core.IStore)">
+            <summary>
+            异步保存数据
+            </summary>
+            <param name="store"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ApeFree.DataStore.IO.CoalesceMangedModel`1">
+            <summary>
+            合并管理模型
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:ApeFree.DataStore.IO.TaskGroup.GetWriteTask">
+            <summary>
+            获取写操作
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApeFree.DataStore.IO.TaskGroup.GetReadTask">
+            <summary>
+            获取读操作
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ApeFree.DataStore.IO.IReadWriteMangedModel`1">
+            <summary>
+            读写管理模型接口
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:ApeFree.DataStore.IO.ReadWriteEventType">
+            <summary>
+            读写事务类型
+            </summary>
+        </member>
+        <member name="T:ApeFree.DataStore.Local.LocalStore`1">
+            <summary>
+            本地存储器
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:ApeFree.DataStore.Local.LocalStore`1.OnLoad">
+            <summary>
+            <inheritdoc/>
+            </summary>
+        </member>
+        <member name="M:ApeFree.DataStore.Local.LocalStore`1.OnSave">
+            <summary>
+            <inheritdoc/>
+            </summary>
+        </member>
+        <member name="T:ApeFree.DataStore.Local.LocalStoreAccessSettings">
+            <summary>
+            本地存储器配置
+            </summary>
+        </member>
+        <member name="P:ApeFree.DataStore.Local.LocalStoreAccessSettings.SavePath">
+            <summary>
+            本地路存储径
+            </summary>
+        </member>
+        <member name="M:ApeFree.DataStore.LocalStoreFactoryExtensions.CreateLocalStore``1(ApeFree.DataStore.StoreFactory,ApeFree.DataStore.Local.LocalStoreAccessSettings)">
+            <summary>
+            创建一个本地(对象)存储器
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="filePath"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ApeFree.DataStore.StoreFactory">
+            <summary>
+            对象存储器构造工厂
+            </summary>
+        </member>
+    </members>
+</doc>
