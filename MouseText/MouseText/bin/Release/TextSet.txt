@@ -1,0 +1,86 @@
+{
+  "$type": "System.Collections.ObjectModel.ObservableCollection`1[[MouseText.TextData, MouseText]], System",
+  "$values": [
+    {
+      "$type": "MouseText.TextData, MouseText",
+      "ID": 0,
+      "Text": "フォントテスト",
+      "FontSize": 56,
+      "FontColor": "#FF8376F5",
+      "Loop": 1,
+      "DwellTime": 500
+    },
+    {
+      "$type": "MouseText.TextData, MouseText",
+      "ID": 1,
+      "Text": "NULL",
+      "FontSize": 56,
+      "FontColor": "#FF5F6BC7",
+      "Loop": 1,
+      "DwellTime": 500
+    },
+    {
+      "$type": "MouseText.TextData, MouseText",
+      "ID": 2,
+      "Text": "NULL",
+      "FontSize": 78,
+      "FontColor": "#FF800040",
+      "Loop": 1,
+      "DwellTime": 500
+    },
+    {
+      "$type": "MouseText.TextData, MouseText",
+      "ID": 3,
+      "Text": "NULL",
+      "FontSize": 96,
+      "FontColor": "#FF00FFFF",
+      "Loop": 1,
+      "DwellTime": 500
+    },
+    {
+      "$type": "MouseText.TextData, MouseText",
+      "ID": 4,
+      "Text": "NULL",
+      "FontSize": 110,
+      "FontColor": "#FFFF0080",
+      "Loop": 1,
+      "DwellTime": 500
+    },
+    {
+      "$type": "MouseText.TextData, MouseText",
+      "ID": 5,
+      "Text": "饿了么",
+      "FontSize": 120,
+      "FontColor": "#FFF7E251",
+      "Loop": 3,
+      "DwellTime": 500
+    },
+    {
+      "$type": "MouseText.TextData, MouseText",
+      "ID": 6,
+      "Text": "带您一路前行",
+      "FontSize": 130,
+      "FontColor": "#FFFF4444",
+      "Loop": 4,
+      "DwellTime": 500
+    },
+    {
+      "$type": "MouseText.TextData, MouseText",
+      "ID": 7,
+      "Text": "美团",
+      "FontSize": 120,
+      "FontColor": "#FF53E2F7",
+      "Loop": 3,
+      "DwellTime": 500
+    },
+    {
+      "$type": "MouseText.TextData, MouseText",
+      "ID": 8,
+      "Text": "保您衣食无忧",
+      "FontSize": 140,
+      "FontColor": "#FFFF4646",
+      "Loop": 4,
+      "DwellTime": 500
+    }
+  ]
+}

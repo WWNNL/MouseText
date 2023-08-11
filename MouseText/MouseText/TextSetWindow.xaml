@@ -1,0 +1,77 @@
+﻿<Window x:Class="MouseText.TextSetWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:hc="https://handyorg.github.io/handycontrol"
+        xmlns:local="clr-namespace:MouseText"
+        mc:Ignorable="d"
+        WindowStyle ="None"
+        AllowsTransparency="True" FontFamily="丁卯点阵体 9px"
+        Topmost="True" Loaded="TextSetWindow_Loaded"
+        WindowStartupLocation="CenterScreen"
+        Title="MouseText" Width="705" Height="450">
+    <Window.Background><!--FontFamily="丁卯点阵体 9px"-->
+        <SolidColorBrush Opacity="0.8"/>
+    </Window.Background>
+    <Window.Resources>
+        <Style TargetType="Label">
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#d4d4d4" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Rectangle Fill="#f0f0f0" Margin="5" Opacity="0.8" RadiusY="2" RadiusX="2">
+            <Rectangle.Effect>
+                <DropShadowEffect
+                        Color="#d4d4d4" Direction="0"
+                        BlurRadius="15" RenderingBias="Quality"
+                        ShadowDepth="1"/>
+            </Rectangle.Effect>
+        </Rectangle>
+        <Grid Margin="15">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="0.08*"/>
+            </Grid.RowDefinitions>
+            <DataGrid Grid.Row="0" x:Name="TextSet" AutoGenerateColumns="False" IsReadOnly="True"
+                    CanUserSortColumns="False" CanUserAddRows="False"  MouseDoubleClick="CellDouble"
+                    SelectionMode="Single" SelectionUnit="Cell" VerticalContentAlignment="Center"
+                    CanUserResizeColumns="False" CanUserResizeRows="False" CanUserReorderColumns="False"
+                    ColumnHeaderHeight="24" RowHeaderWidth="0">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ID" Binding="{Binding ID}" IsReadOnly="True"/>
+                    <DataGridTextColumn Header="Text" Binding="{Binding Text}" Width="2.5*"/>
+                    <DataGridTextColumn Header="FontSize" Binding="{Binding FontSize}" Width="0.4*"/>
+                    <DataGridTemplateColumn Header="FontColor" Width="0.6*" IsReadOnly="True">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <Border Margin="2 3 2 2" Width="10" Height="10" Background="{Binding ElementName=FontColorSet,Path=Content}" BorderThickness="1" BorderBrush="Black"/>
+                                    <Button  Height="20" Content="{Binding FontColor}" x:Name="FontColorSet"
+                                            FontSize="10" VerticalAlignment="Bottom" Background="White"
+                                            Click="Color_Selection" BorderThickness="0"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTextColumn Header="Loop" Binding="{Binding Loop}" Width="0.4*"/>
+                    <DataGridTextColumn Header="DwellTime/ms" Binding="{Binding DwellTime}" Width="0.5*" IsReadOnly="True"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <StackPanel Grid.Row="1" Orientation="Horizontal">
+                <TextBox Margin="0 5 0 0" Width="235" Text="双击单元格获取/更改值" x:Name="TextShow" VerticalContentAlignment="Center"/>
+                <Button Margin="10 5 0 0" Width="74" Content="更新" Click="Botton_Renew" x:Name="Renew"/>
+            </StackPanel>
+            <StackPanel Grid.Row="1" FlowDirection="RightToLeft" Orientation="Horizontal">
+                <Button Margin="10 5 0 0" Width="74" Content="确认" Click="Button_Confirm"/>
+                <Button Margin="10 5 0 0" Width="74" Content="取消" Click="Botton_Cancel"/>
+                <Button Margin="10 5 0 0" Width="74" Content="删除" Click="Botton_Delete"/>
+                <Button Margin="10 5 0 0" Width="74" Content="增加" Click="Botton_Add"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

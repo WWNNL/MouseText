@@ -1,0 +1,17 @@
+﻿<Window x:Class="MouseText.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MouseText"
+        mc:Ignorable="d"
+        WindowStyle ="None"
+        AllowsTransparency="True"
+        Topmost="True" FontFamily="丁卯点阵体 9px"
+        Closed="Window_Closed" Loaded="Window_Loaded"
+        Title="MouseText" Height="77" Width="350">
+    <Window.Background>
+        <SolidColorBrush Opacity="0"/>
+    </Window.Background>
+    <Label x:Name="LText"/>
+</Window>
